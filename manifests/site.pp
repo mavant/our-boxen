@@ -3,7 +3,7 @@ require homebrew
 require gcc
 
 Exec {
-  group       => '1082170138',
+  group       => 'staff',
   logoutput   => on_failure,
   user        => $boxen_user,
 
