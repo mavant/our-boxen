@@ -83,6 +83,7 @@ node default {
   include osx::no_network_dsstores 
   include osx::software_update
   include osx::keyboard::capslock_to_control
+  include zsh
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {

@@ -71,7 +71,7 @@ github "chrome",      "1.2.0"
 github "hipchat",     "1.1.3"
 github "karabiner",   "1.0.1"
 github "osx",         "2.8.0"
- 
+github "zsh",         "1.0.0"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
