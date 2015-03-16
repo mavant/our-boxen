@@ -57,6 +57,34 @@ node default {
   include git
   include hub
   include nginx
+  include karabiner
+  include karabiner::login_item
+  include java
+  include iterm2
+  include gpgtools
+  include vagrant
+  include onepassword
+  include skype
+  include evernote
+  include dropbox
+  include firefox
+  include chrome
+  include calibre
+  include hipchat
+  include git
+  include go
+  include homebrew
+  include brewcask
+  include gcc
+  include openssl
+  include osx::global::enable_standard_function_keys
+  include osx::dock::autohide 
+  include osx::finder::show_hidden_files
+  include osx::finder::unhide_library 
+  include osx::finder::show_all_filename_extensions
+  include osx::no_network_dsstores 
+  include osx::software_update
+  include osx::keyboard::capslock_to_control
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
@@ -87,5 +115,13 @@ node default {
   file { "${boxen::config::srcdir}/our-boxen":
     ensure => link,
     target => $boxen::config::repodir
+  }
+
+  karabiner::remap{ 'controlL2controlL_escape': }
+  karabiner::set{ 'parameter.keyrepeat_delayuntilrepeat':
+      value => '200'
+  }
+  karabiner::set{ 'parameter.keyrepeat_keyrepeat':
+      value => '33'
   }
 }

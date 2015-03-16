@@ -57,6 +57,22 @@ github "ruby",        "8.1.7"
 github "stdlib",      "4.2.1", :repo => "puppetlabs/puppetlabs-stdlib"
 github "sudo",        "1.0.0"
 github "xquartz",     "1.2.1"
+github "java",        "1.8.2"
+github "vagrant",     "3.3.0"
+github "gpgtools",    "1.0.4"
+github "iterm2",      "1.2.4"
+github "karabiner",   "1.0.1"
+github "onepassword", "1.1.5"
+github "skype",       "1.1.0"
+github "evernote",    "2.0.4"
+github "dropbox",     "2.10.41"
+github "firefox",     "1.2.3"
+github "chrome",      "1.2.0"
+github "calibre",     "3.1.0"
+github "hipchat",     "1.1.3"
+github "karabiner",   "1.0.1"
+github "osx",         "2.8.0"
+ 
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
