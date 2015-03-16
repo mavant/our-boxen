@@ -104,7 +104,6 @@ node default {
       'coreutils',
       'curl',
       'fzf',
-      'gh',
       'task',
       'the_platinum_searcher',
       'the_silver_searcher'
