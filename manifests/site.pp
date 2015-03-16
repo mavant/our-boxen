@@ -106,8 +106,21 @@ node default {
       'fzf',
       'task',
       'the_platinum_searcher',
-      'the_silver_searcher'
+      'the_silver_searcher',
+      'tor',
+      'tmux',
+      'vifm'
     ]:
+  }
+
+  package { 'php54':
+    ensure => present,
+    install_options => [
+      '--with-lua',
+      '--with-luajit'
+    ],
+    require => Package['lua'],
+    require => Package['luajit'],
   }
 
   file { "${boxen::config::srcdir}/our-boxen":
