@@ -35,6 +35,11 @@ class people::mavant {
       target => $srcdir
   }
 
+  # Because some asshole decided the git module should manage my gitignore for me.
+  Git::Config::Global <| title == 'core.excludesfile' |> {
+      value => "${home}/.gitignore_global"
+  }
+
   karabiner::remap{ 'controlL2controlL_escape': }
   karabiner::set{ 'repeat.initial_wait':
       value => '200'
