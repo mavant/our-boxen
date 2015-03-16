@@ -27,7 +27,6 @@ class people::mavant {
   $home     = "/Users/${::boxen_user}"
   $srcdir   = "/Volumes/git"
   $src      = "/src
-  $dotfiles = "${srcdir}/dotfiles"
   
   file { $srcdir:
     ensure  => directory
@@ -36,11 +35,6 @@ class people::mavant {
   file { $src:
       ensure => link,
       target => $srcdir
-  }
-
-  repository { $dotfiles:
-    source  => 'mavant/dotfiles',
-    require => File[$my]
   }
 
   karabiner::remap{ 'controlL2controlL_escape': }
