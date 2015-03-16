@@ -108,7 +108,15 @@ node default {
     [
       'ack',
       'findutils',
-      'gnu-tar'
+      'gnu-tar',
+      'coreutils',
+      'curl',
+      'findutils',
+      'fzf',
+      'gh',
+      'task',
+      'the_platinum_searcher',
+      'the_silver_searcher'
     ]:
   }
 
