@@ -104,6 +104,8 @@ node default {
       'coreutils',
       'curl',
       'fzf',
+      'lua',
+      'luajit',
       'task',
       'the_platinum_searcher',
       'the_silver_searcher',
@@ -113,14 +115,13 @@ node default {
     ]:
   }
 
-  package { 'php54':
+  package { 'vim':
     ensure => present,
     install_options => [
       '--with-lua',
-      '--with-luajit'
-    ],
-    require => Package['lua'],
-    require => Package['luajit'],
+      '--with-luajit',
+      '--override-system-vim'
+    ]
   }
 
   file { "${boxen::config::srcdir}/our-boxen":
