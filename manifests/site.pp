@@ -98,9 +98,4 @@ node default {
       '--override-system-vim'
     ]
   }
-
-  file { "${boxen::config::srcdir}/our-boxen":
-    ensure => link,
-    target => $boxen::config::repodir
-  }
 }

@@ -25,17 +25,24 @@ class people::mavant {
     include zsh
 
   $home     = "/Users/${::boxen_user}"
-  $my       = "${home}/my"
-  $dotfiles = "${my}/dotfiles"
+  $srcdir   = "/Volumes/git/"
+  $src      = "/src/
+  $dotfiles = "${src}/dotfiles"
   
-  file { $my:
+  file { $srcdir:
     ensure  => directory
+  }
+
+  file { $src:
+      ensure => link,
+      target => $srcdir
   }
 
   repository { $dotfiles:
     source  => 'mavant/dotfiles',
     require => File[$my]
   }
+
   karabiner::remap{ 'controlL2controlL_escape': }
   karabiner::set{ 'repeat.initial_wait':
       value => '200'
