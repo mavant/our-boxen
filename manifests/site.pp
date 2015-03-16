@@ -56,7 +56,6 @@ node default {
   include dnsmasq
   include git
   include hub
-  include nginx
   include karabiner
   include karabiner::login_item
   include java
