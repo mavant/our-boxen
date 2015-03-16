@@ -69,7 +69,6 @@ node default {
   include dropbox
   include firefox
   include chrome
-  include calibre
   include hipchat
   include go
   include homebrew
