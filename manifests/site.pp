@@ -60,7 +60,8 @@ node default {
   include karabiner
   include karabiner::login_item
   include java
-  include iterm2
+  include iterm2::stable
+  include iterm2::colors::zenburn
   include gpgtools
   include vagrant
   include onepassword
