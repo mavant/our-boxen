@@ -25,9 +25,9 @@ class people::mavant {
     include zsh
 
   $home     = "/Users/${::boxen_user}"
-  $srcdir   = "/Volumes/git/"
-  $src      = "/src/
-  $dotfiles = "${src}/dotfiles"
+  $srcdir   = "/Volumes/git"
+  $src      = "/src
+  $dotfiles = "${srcdir}/dotfiles"
   
   file { $srcdir:
     ensure  => directory
