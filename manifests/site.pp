@@ -69,10 +69,8 @@ node default {
   include firefox
   include chrome
   include hipchat
-  include go
   include homebrew
   include brewcask
-  include gcc
   include openssl
   include osx::global::enable_standard_function_keys
   include osx::dock::autohide 
