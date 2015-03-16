@@ -105,7 +105,6 @@ node default {
       'gnu-tar',
       'coreutils',
       'curl',
-      'findutils',
       'fzf',
       'gh',
       'task',
