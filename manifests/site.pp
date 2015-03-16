@@ -61,7 +61,6 @@ node default {
   include java
   include iterm2::stable
   include iterm2::colors::zenburn
-  include gpgtools
   include vagrant
   include onepassword
   include skype
@@ -84,6 +83,8 @@ node default {
   include osx::software_update
   include osx::keyboard::capslock_to_control
   include zsh
+
+  class { 'gpgtools': }
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
