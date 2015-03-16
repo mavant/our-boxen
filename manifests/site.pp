@@ -71,7 +71,6 @@ node default {
   include chrome
   include calibre
   include hipchat
-  include git
   include go
   include homebrew
   include brewcask
