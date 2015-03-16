@@ -26,7 +26,7 @@ class people::mavant {
 
   $home     = "/Users/${::boxen_user}"
   $srcdir   = "/Volumes/git"
-  $src      = "/src
+  $src      = "/src"
   
   file { $srcdir:
     ensure  => directory
