@@ -128,10 +128,10 @@ node default {
   }
 
   karabiner::remap{ 'controlL2controlL_escape': }
-  karabiner::set{ 'parameter.keyrepeat_delayuntilrepeat':
+  karabiner::set{ 'repeat.initial_wait':
       value => '200'
   }
-  karabiner::set{ 'parameter.keyrepeat_keyrepeat':
+  karabiner::set{ 'repeat.wait':
       value => '33'
   }
 }
