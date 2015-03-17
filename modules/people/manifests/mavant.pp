@@ -47,4 +47,13 @@ class people::mavant {
   karabiner::set{ 'repeat.wait':
       value => '33'
   }
+
+  package { 'vim':
+    ensure => present,
+    install_options => [
+      '--with-lua',
+      '--with-luajit',
+      '--override-system-vim'
+    ]
+  }
 }

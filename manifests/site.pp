@@ -89,13 +89,4 @@ node default {
       'vifm'
     ]:
   }
-
-  package { 'vim':
-    ensure => present,
-    install_options => [
-      '--with-lua',
-      '--with-luajit',
-      '--override-system-vim'
-    ]
-  }
 }
