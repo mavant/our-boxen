@@ -79,4 +79,8 @@ class people::mavant {
   class { 'intellij':
       edition => 'ultimate'
   }
+  
+  # rcm (but maybe I should do this with puppet instead?)
+  homebrew::tap { 'thoughtbot/formulae': } ->
+  package { 'rcm': }
 }
