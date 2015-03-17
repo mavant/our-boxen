@@ -77,16 +77,9 @@ node default {
       'gnu-tar',
       'coreutils',
       'curl',
-      'fzf',
-      'lua',
-      'luajit',
-      'task',
-      'the_platinum_searcher',
-      'the_silver_searcher',
       'tree',
-      'tor',
       'tmux',
-      'vifm'
+      'wget'
     ]:
   }
 }
