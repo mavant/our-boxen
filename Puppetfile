@@ -71,6 +71,7 @@ github "hipchat",     "1.1.3"
 github "karabiner",   "1.0.1"
 github "osx",         "2.8.0"
 github "zsh",         "1.0.0"
+github "intellij",    "1.5.2", :repo => "mavant/puppet-intellij"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.

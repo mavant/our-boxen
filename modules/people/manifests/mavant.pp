@@ -55,7 +55,6 @@ class people::mavant {
   package {
       [
           'gh',
-          'curl',
           'fzf',
           'lua',
           'luajit',
@@ -74,5 +73,10 @@ class people::mavant {
       '--with-luajit',
       '--override-system-vim'
     ]
+  }
+
+  # IntelliJ
+  class { 'intellij':
+      edition => 'ultimate'
   }
 }
