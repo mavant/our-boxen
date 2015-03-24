@@ -58,6 +58,7 @@ class people::mavant {
           'fzf',
           'lua',
           'luajit',
+          'luarocks',
           'task',
           'the_platinum_searcher',
           'the_silver_searcher',
