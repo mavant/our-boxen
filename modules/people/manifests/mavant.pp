@@ -54,7 +54,9 @@ class people::mavant {
   # Homebrew packages
   package {
       [
+          'cabal-install',
           'gh',
+          'ghc',
           'fzf',
           'lua',
           'luajit',
