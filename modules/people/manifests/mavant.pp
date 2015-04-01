@@ -4,6 +4,7 @@ class people::mavant {
   $srcdir   = '/Volumes/git'
   $src      = '/src'
 
+  file { '/usr/local': ensure => directory }
   file { $srcdir: ensure => directory } ->
   file { $src:
       ensure => link,
