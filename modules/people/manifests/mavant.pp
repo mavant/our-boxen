@@ -77,18 +77,32 @@ class people::mavant {
     ]
   }
 
-  # Haskell platform
-  package { 'haskell-platform': provider => 'brewcask' }
+  # Homebrew casks
+  package {
+    [
+      'haskell-platform'
+    ]:
+    provider => 'brewcask'
+  }
 
-  # IntelliJ
+  # IntelliJ (Maybe use cask instead?)
   class { 'intellij': edition => 'ultimate' }
 
-  # rcm (but maybe I should do this with puppet instead?)
+  # rcm
   homebrew::tap { 'thoughtbot/formulae': } -> package { 'rcm': }
 
-  # gnu grep is crucial
+  # GNU packages with default names. Make OSX more like Linux.
   homebrew::tap { 'homebrew/dupes': } ->
-  package { 'homebrew/dupes/grep':
+  package {
+      [
+        'grep',
+        'findutils',
+        'gnu-indent',
+        'gnu-which',
+        'gnu-tar',
+        'gnu-sed',
+        'watch'
+      ]:
     ensure          => present,
     install_options => [ '--with-default-names' ]
   }

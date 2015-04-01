@@ -73,8 +73,6 @@ node default {
   package {
     [
       'ack',
-      'findutils',
-      'gnu-tar',
       'coreutils',
       'curl',
       'tree',
