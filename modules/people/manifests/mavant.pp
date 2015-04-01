@@ -4,7 +4,7 @@ class people::mavant {
   $src      = '/src'
 
   file { $srcdir:
-    ensure  => directory
+    ensure => directory
   }
 
   file { $src:
@@ -71,7 +71,7 @@ class people::mavant {
   }
 
   package { 'vim':
-    ensure => present,
+    ensure          => present,
     install_options => [
       '--with-lua',
       '--with-luajit',
@@ -91,7 +91,7 @@ class people::mavant {
   # gnu grep is crucial
   homebrew::tap { 'homebrew/dupes': } ->
   package { 'homebrew/dupes/grep':
-    ensure => present,
+    ensure          => present,
     install_options => [
       '--with-default-names'
     ]
