@@ -86,4 +86,13 @@ class people::mavant {
   # rcm (but maybe I should do this with puppet instead?)
   homebrew::tap { 'thoughtbot/formulae': } ->
   package { 'rcm': }
+
+  # gnu grep is crucial
+  homebrew::tap { 'homebrew/dupes': } ->
+  package { 'grep':
+    ensure => present,
+    install_options => [
+      '--with-default-names'
+    ]
+  }
 }
