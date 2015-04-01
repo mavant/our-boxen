@@ -57,6 +57,7 @@ class people::mavant {
           'luajit',
           'luarocks',
           'pcre',
+          'reattach-to-user-namespace',
           'task',
           'the_platinum_searcher',
           'the_silver_searcher',
