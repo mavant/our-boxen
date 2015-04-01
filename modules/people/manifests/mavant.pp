@@ -86,7 +86,10 @@ class people::mavant {
   }
 
   # IntelliJ (Maybe use cask instead?)
-  class { 'intellij': edition => 'ultimate' }
+  class { 'intellij':
+      edition => 'ultimate',
+      version => '14.1.1'
+  }
 
   # rcm
   homebrew::tap { 'thoughtbot/formulae': } -> package { 'rcm': }
