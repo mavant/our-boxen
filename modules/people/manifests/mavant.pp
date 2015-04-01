@@ -1,3 +1,4 @@
+# My very own module.
 class people::mavant {
   $home     = "/Users/${::boxen_user}"
   $srcdir   = '/Volumes/git'
