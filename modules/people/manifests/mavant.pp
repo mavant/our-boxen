@@ -55,9 +55,7 @@ class people::mavant {
   # Homebrew packages
   package {
       [
-          'cabal-install',
           'gh',
-          'ghc',
           'fzf',
           'lua',
           'luajit',
@@ -79,6 +77,9 @@ class people::mavant {
       '--override-system-vim'
     ]
   }
+
+  # Haskell platform
+  package { 'haskell-platform': provider => 'brewcask' }
 
   # IntelliJ
   class { 'intellij':
