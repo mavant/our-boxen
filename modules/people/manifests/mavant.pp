@@ -43,11 +43,11 @@ class people::mavant {
   # Karabiner config
   include karabiner
   include karabiner::login_item
-  karabiner::remap{ 'controlL2controlL_escape': }
-  karabiner::set{ 'repeat.initial_wait':
+  karabiner::remap { 'controlL2controlL_escape': }
+  karabiner::set { 'repeat.initial_wait':
       value => '200'
   }
-  karabiner::set{ 'repeat.wait':
+  karabiner::set { 'repeat.wait':
       value => '33'
   }
 
