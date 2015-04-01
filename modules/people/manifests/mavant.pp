@@ -49,6 +49,8 @@ class people::mavant {
   package {
       [
           'gh',
+          'git-extras',
+          'git-gerrit',
           'fzf',
           'keybase',
           'lua',
