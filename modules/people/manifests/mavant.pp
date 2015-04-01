@@ -50,6 +50,7 @@ class people::mavant {
       [
           'gh',
           'fzf',
+          'keybase',
           'lua',
           'luajit',
           'luarocks',
