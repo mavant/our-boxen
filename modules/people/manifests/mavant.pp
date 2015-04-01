@@ -4,10 +4,7 @@ class people::mavant {
   $srcdir   = '/Volumes/git'
   $src      = '/src'
 
-  file { $srcdir:
-    ensure => directory
-  }
-
+  file { $srcdir: ensure => directory } ->
   file { $src:
       ensure => link,
       target => $srcdir
@@ -45,12 +42,8 @@ class people::mavant {
   include karabiner
   include karabiner::login_item
   karabiner::remap { 'controlL2controlL_escape': }
-  karabiner::set { 'repeat.initial_wait':
-      value => '200'
-  }
-  karabiner::set { 'repeat.wait':
-      value => '33'
-  }
+  karabiner::set { 'repeat.initial_wait': value => '200' }
+  karabiner::set { 'repeat.wait': value => '33' }
 
   # Homebrew packages
   package {
@@ -82,20 +75,15 @@ class people::mavant {
   package { 'haskell-platform': provider => 'brewcask' }
 
   # IntelliJ
-  class { 'intellij':
-      edition => 'ultimate'
-  }
+  class { 'intellij': edition => 'ultimate' }
 
   # rcm (but maybe I should do this with puppet instead?)
-  homebrew::tap { 'thoughtbot/formulae': } ->
-  package { 'rcm': }
+  homebrew::tap { 'thoughtbot/formulae': } -> package { 'rcm': }
 
   # gnu grep is crucial
   homebrew::tap { 'homebrew/dupes': } ->
   package { 'homebrew/dupes/grep':
     ensure          => present,
-    install_options => [
-      '--with-default-names'
-    ]
+    install_options => [ '--with-default-names' ]
   }
 }
