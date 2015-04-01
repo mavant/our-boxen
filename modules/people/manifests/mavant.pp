@@ -2,7 +2,7 @@ class people::mavant {
   $home     = "/Users/${::boxen_user}"
   $srcdir   = "/Volumes/git"
   $src      = "/src"
-  
+
   file { $srcdir:
     ensure  => directory
   }
@@ -35,7 +35,7 @@ class people::mavant {
   include osx::software_update
   include osx::keyboard::capslock_to_control
 
-  # Because some asshole decided the git module should manage my gitignore for me.
+  # The git module attempts to set its own gitignore unless overwritten
   Git::Config::Global <| title == 'core.excludesfile' |> {
       value => "${home}/.gitignore_global"
   }
@@ -61,6 +61,7 @@ class people::mavant {
           'lua',
           'luajit',
           'luarocks',
+          'pcre',
           'task',
           'the_platinum_searcher',
           'the_silver_searcher',
@@ -82,14 +83,14 @@ class people::mavant {
   class { 'intellij':
       edition => 'ultimate'
   }
-  
+
   # rcm (but maybe I should do this with puppet instead?)
   homebrew::tap { 'thoughtbot/formulae': } ->
   package { 'rcm': }
 
   # gnu grep is crucial
   homebrew::tap { 'homebrew/dupes': } ->
-  package { 'grep':
+  package { 'homebrew/dupes/grep':
     ensure => present,
     install_options => [
       '--with-default-names'
