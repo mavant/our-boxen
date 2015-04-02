@@ -60,12 +60,16 @@ class people::mavant {
           'pcre',
           'parallel',
           'reattach-to-user-namespace',
-          'task',
           'the_platinum_searcher',
           'the_silver_searcher',
           'tor',
           'vifm'
       ]:
+  }
+
+  package { 'task':
+    ensure          => present,
+    install_options => [ '--with-gnutls' ]
   }
 
   package { 'vim':
