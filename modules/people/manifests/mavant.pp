@@ -67,6 +67,11 @@ class people::mavant {
       ]:
   }
 
+  package { 'global':
+    ensure          => present,
+    install_options => [ '--with-exuberant-ctags' ]
+  }
+
   package { 'task':
     ensure          => present,
     install_options => [ '--with-gnutls' ]
