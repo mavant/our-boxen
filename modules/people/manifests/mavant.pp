@@ -89,7 +89,8 @@ class people::mavant {
   # Homebrew casks
   package {
     [
-      'haskell-platform'
+      'haskell-platform',
+      'gpgtools'
     ]:
     provider => 'brewcask'
   }
