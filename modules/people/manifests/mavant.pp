@@ -57,6 +57,7 @@ class people::mavant {
           'lua',
           'luajit',
           'luarocks',
+          'sshrc',
           'pcre',
           'parallel',
           'reattach-to-user-namespace',
