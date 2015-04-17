@@ -49,10 +49,10 @@ class people::mavant {
   # Homebrew packages
   package {
       [
-          'gh',
           'git-extras',
           'git-gerrit',
           'fzf',
+          'hub',
           'keybase',
           'lua',
           'luajit',
