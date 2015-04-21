@@ -49,6 +49,7 @@ class people::mavant {
   # Homebrew packages
   package {
       [
+          'bash',
           'git-extras',
           'git-gerrit',
           'fzf',
