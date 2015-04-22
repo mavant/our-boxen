@@ -50,6 +50,7 @@ class people::mavant {
   package {
       [
           'bash',
+          'bash-completion2',
           'git-extras',
           'git-gerrit',
           'fzf',
