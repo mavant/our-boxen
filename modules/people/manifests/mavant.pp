@@ -58,7 +58,6 @@ class people::mavant {
           'keybase',
           'lua',
           'luajit',
-          'luarocks',
           'sshrc',
           'pcre',
           'parallel',
@@ -93,7 +92,8 @@ class people::mavant {
   package {
     [
       'haskell-platform',
-      'gpgtools'
+      'gpgtools',
+      'hyperswitch'
     ]:
     provider => 'brewcask'
   }
