@@ -79,6 +79,23 @@ class people::mavant {
     install_options => [ '--with-gnutls' ]
   }
 
+  package { 'weechat':
+    ensure          => present,
+    install_options => [
+      '--with-aspell',
+      '--with-curl',
+      '--with-python',
+      '--with-lua',
+      '--with-ruby',
+      '--with-perl'
+    ]
+  }
+
+  package { 'aspell':
+    ensure          => present,
+    install_options => [ '--with-lang-en' ]
+  }
+
   package { 'vim':
     ensure          => present,
     install_options => [
