@@ -129,7 +129,6 @@ class people::mavant {
   package {
       [
         'grep',
-        'findutils',
         'gnu-indent',
         'gnu-which',
         'gnu-tar',
