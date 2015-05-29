@@ -64,6 +64,7 @@ class people::mavant {
           'reattach-to-user-namespace',
           'the_platinum_searcher',
           'the_silver_searcher',
+          'thefuck',
           'tor',
           'vifm'
       ]:
