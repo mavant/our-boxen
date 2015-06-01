@@ -58,6 +58,7 @@ class people::mavant {
           'keybase',
           'lua',
           'luajit',
+          'nmap',
           'pcre',
           'parallel',
           'reattach-to-user-namespace',
