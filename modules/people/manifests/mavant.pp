@@ -61,6 +61,7 @@ class people::mavant {
           'nmap',
           'pcre',
           'parallel',
+          'pass',
           'reattach-to-user-namespace',
           'sshrc',
           'the_platinum_searcher',
