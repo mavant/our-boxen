@@ -51,6 +51,7 @@ class people::mavant {
       [
           'bash',
           'bash-completion2',
+          'dvtm',
           'fzf',
           'git-extras',
           'git-gerrit',
