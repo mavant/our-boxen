@@ -57,7 +57,6 @@ class people::mavant {
           'git-extras',
           'git-gerrit',
           'hub',
-          'keybase',
           'lua',
           'luajit',
           'nmap',
