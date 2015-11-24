@@ -56,7 +56,6 @@ class people::mavant {
           'fzf',
           'git-extras',
           'git-gerrit',
-          'git-hooks',
           'hub',
           'lua',
           'luajit',
